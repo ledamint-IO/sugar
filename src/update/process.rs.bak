@@ -104,7 +104,7 @@ pub fn process_update(args: UpdateArgs) -> Result<()> {
             };
 
             if config_data.sol_treasury_account.is_some() {
-                return Err(anyhow!("If safe-token-account or safe-token is set then sol-treasury-account cannot be set"));
+                return Err(anyhow!("If spl-token-account or spl-token is set then sol-treasury-account cannot be set"));
             }
 
             // validates the mint address of the token accepted as payment
@@ -116,7 +116,7 @@ pub fn process_update(args: UpdateArgs) -> Result<()> {
                 token_account
             } else {
                 return Err(anyhow!(
-                    "If safe-token is set, safe-token-account must also be set"
+                    "If spl-token is set, spl-token-account must also be set"
                 ));
             }
         }
