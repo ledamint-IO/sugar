@@ -4,3 +4,5 @@ sugar.log
 *.json
 test_item
 /.idea
+*.lock
+*.bak
